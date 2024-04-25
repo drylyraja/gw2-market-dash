@@ -5,7 +5,7 @@ import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the 
 import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the grid
 import { useEffect, useState } from "react";
 
-const marketData = () => {
+const MarketData = () => {
   const [rowData, setRowData] = useState([])
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const marketData = () => {
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {marketData()}
+      {MarketData()}
     </main>
   );
 }
