@@ -5,12 +5,7 @@ import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the 
 import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the grid
 
 export const MarketData = () => {
-    const [rowData, setRowData] = useState([])
-  
-    useEffect(() => {
-      getMarketData()
-        .then((data) => setRowData(data.rows))
-    }, [])  
+    const [rowData, setRowData] = useState([getMarketData()])
   
     const [columnDefs]: any = useState([
       { field: 'name' },
