@@ -9,7 +9,6 @@ export const MarketData = () => {
   
     useEffect(() => {
       getMarketData()
-        .then((response) => response.json())
         .then((data) => setRowData(data.rows))
     }, [])  
   
