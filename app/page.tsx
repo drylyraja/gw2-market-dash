@@ -4,7 +4,7 @@ import { MarketData } from "@/lib/market-data-grid";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {MarketData()}
+      <div>{MarketData()}</div>
     </main>
   );
 }
