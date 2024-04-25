@@ -4,7 +4,9 @@ const prisma = new PrismaClient()
 
 export async function getMarketData() {
     const marketData = await prisma.priceitems.findMany()
-    return marketData
+    const marketData2 = JSON.stringify(marketData)
+    const parsedMarketData = JSON.parse(marketData2)
+    return parsedMarketData
 }
 
 getMarketData()
