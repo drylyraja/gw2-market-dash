@@ -11,7 +11,7 @@ const prisma = new PrismaClient()
 
 const MarketGrid = () => {
   const [rowData, setRowData] = useEffect([
-    getMarketData()
+    getMarketData().toArray()
   ])
 
   const [colDefs, setColDefs] = useState([
