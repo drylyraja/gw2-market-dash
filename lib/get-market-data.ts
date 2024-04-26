@@ -4,6 +4,7 @@ const prisma = new PrismaClient()
 
 export async function getMarketData() {
     const marketData = await prisma.priceitems.findMany()
+    console.log(marketData)
     return marketData
 }
 
