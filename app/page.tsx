@@ -10,9 +10,9 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 const MarketGrid = () => {
-  const [rowData, setRowData] = useEffect([
+  const [rowData, setRowData] = useEffect(
     getMarketData().toArray()
-  ])
+  )
 
   const [colDefs, setColDefs] = useState([
     { field: 'name' },
