@@ -7,10 +7,10 @@ import { getMarketData } from "@/lib/get-market-data";
 import { ColDef } from 'ag-grid-community'
 import { PrismaClient } from '@prisma/client'
 
-const [rowData, setRowData] = useState(getMarketData());
 
 
 export default function Home() {
+  const [rowData, setRowData] = useState(getMarketData());
   return (
     <main className="block mx-auto w-screen h-dvh">
       <AgGridReact rowData={rowData} />
